@@ -25,9 +25,17 @@
 }
 
 #logo {
-  margin: 0px 30px 0px 80px;
+  margin: 0px 60px 0px 100px;
   display: flex;
   align-items: center;
+}
+
+#content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 30px; /* 로고와 컨텐츠가 떨어지지 않게 */
 }
 
 #content {
@@ -42,4 +50,8 @@
   color: #3d352e;
   margin: 0 18px;
   text-decoration: none;
+}
+
+#login {
+  margin: 0px 48px;
 }
