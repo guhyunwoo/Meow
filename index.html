@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="wrapper">
+      <!-- 네비게이션 바 시작 -->
       <nav id="header">
         <div id="contents-wrapper">
           <a href="./index.html" id="logo">
@@ -20,12 +21,108 @@
               <a href="">쇼핑</a>
               <a href="">커뮤니티</a>
             </div>
-            <a href="" id="login">
+            <a href="./login.html" id="login">
               <img src="./images/LOG IN button.svg" />
             </a>
           </div>
         </div>
       </nav>
+      <!-- 네비게이션 바 끝 -->
+      <!-- 배너 시작 -->
+      <div id="banner" style="position: relative; top: 0">
+        <div class="banner-wrapper">
+          <h1 class="banner-text1">당신의 인생의 동반자를 찾아보세요</h1>
+          <p class="banner-text2">
+            보호소와 구조 시설 또는 사람들이 분양하는 동물들을 찾아보세요
+          </p>
+          <div class="search-bar">
+            <a href="">
+              <img src="./images/search.svg" />
+            </a>
+            <input type="search" placeholder="검색" class="search" />
+          </div>
+        </div>
+        <!--동물 종류별 모음-->
+        <div class="animals-categories-wrapper">
+          <a href="">
+            <div class="animals-category" id="dog">
+              <img src="./images/dog.svg" />
+            </div>
+          </a>
+          <a href="">
+            <div class="animals-category" id="cat">
+              <img src="./images/cat.svg" />
+            </div>
+          </a>
+          <a href="">
+            <div class="animals-category" id="other">
+              <img src="./images/other.svg" />
+            </div>
+          </a>
+          <a href="">
+            <div class="animals-category" id="lost">
+              <img src="./images/lost.svg" />
+            </div>
+          </a>
+        </div>
+        <!-- 배너 끝 -->
+      </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EasePack.min.js"></script>
+    <script>
+      const banner = document.querySelector("#banner");
+      const dog = document.querySelector("#dog");
+      const cat = document.querySelector("#cat");
+      const other = document.querySelector("#other");
+      const lost = document.querySelector("#lost");
+
+      gsap.set(dog, { opacity: 0, y: -80 });
+      gsap.set(cat, { opacity: 0, x: 80 });
+      gsap.set(other, { opacity: 0, y: 80 });
+      gsap.set(lost, { opacity: 0, x: 300 });
+
+      gsap.to(banner, { opacity: 1, y: 60 });
+      gsap.to(dog, {
+        duration: 2,
+        delay: 0.6,
+        y: 0,
+        ease: "elastic",
+      });
+      gsap.to(dog, {
+        delay: 0.6,
+        opacity: 1,
+      });
+      gsap.to(cat, {
+        delay: 0.7,
+        duration: 2,
+        ease: "elastic",
+        x: 0,
+      });
+      gsap.to(cat, {
+        delay: 0.7,
+        opacity: 1,
+      });
+      gsap.to(other, {
+        delay: 0.8,
+        opacity: 1,
+      });
+      gsap.to(other, {
+        delay: 0.8,
+        duration: 2,
+        ease: "elastic",
+        y: 0,
+      });
+      gsap.to(lost, {
+        delay: 0.9,
+        opacity: 1,
+      });
+      gsap.to(lost, {
+        delay: 0.9,
+        duration: 2,
+        ease: "elastic",
+        x: 0,
+      });
+    </script>
   </body>
 </html>

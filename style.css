@@ -5,17 +5,17 @@
 
 #wrapper {
   width: 100%;
-  height: 2192px;
+  height: 2192px; /* 예시로 넣은 높이값입니다. 필요에 따라 수정하세요. */
 }
 
 #header {
   width: 100%;
   height: 60px;
-  position: fixed;
+  position: fixed; /* 네비게이션 바를 화면 상단에 고정합니다. */
   background: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
-  flex-shrink: 0;
+  z-index: 1000; /* 배너보다 위로 올리기 위한 z-index 설정 */
 }
 
 #contents-wrapper {
@@ -53,5 +53,86 @@
 }
 
 #login {
-  margin: 0px 48px;
+  margin: 16px 48px 12px 0px;
+}
+
+#login :hover {
+  content: url(./images/버튼=호버.svg);
+  transition: 500ms;
+}
+
+#banner {
+  width: 100%; /* 배너를 화면에 꽉 채우기 위해 너비를 100%로 설정 */
+  height: 440px; /* 배너의 높이 설정 */
+  background-image: url("./images/backgroundimage.svg");
+  background-size: cover; /* 배경 이미지를 커버로 설정 */
+  background-position: center; /* 배경 이미지를 가운데 정렬 */
+  display: flex;
+  flex-direction: column; /* 내부 요소를 세로 방향으로 정렬하기 위해 */
+  justify-content: center; /* 세로 중앙 정렬을 위한 설정 */
+  align-items: center; /* 가로 중앙 정렬을 위한 설정 */
+  text-align: center; /* 텍스트 가운데 정렬을 위한 설정 */
+  margin-right: 1440px;
+}
+
+.banner-wrapper {
+  margin-top: 200px;
+}
+
+.search-bar {
+  position: relative;
+  width: 700px; /* 검색창의 너비를 설정 */
+  max-width: 600px; /* 최대 너비 설정 */
+  height: 60px; /* 검색창의 높이 설정 */
+}
+
+.search-bar input[type="search"] {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px; /* 검색창의 모서리를 둥글게 설정 */
+  border: none; /* 테두리 없애기 */
+  box-sizing: border-box; /* padding이 너비에 포함되도록 설정 */
+  font-size: 16px; /* 글꼴 크기 설정 */
+  padding: 10px 20px; /* 내부 패딩 설정 */
+  padding-right: 50px; /* 아이콘 위치를 위한 오른쪽 패딩 */
+  outline: none; /* 포커스 효과 없애기 */
+}
+
+.search-bar img {
+  position: absolute;
+  right: 28px; /* 오른쪽으로 20px 위치 */
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px; /* 아이콘 크기 조정 */
+}
+
+.banner-text1 {
+  color: #fff; /* 배너 텍스트 색상 설정 */
+  font-family: "KoreanSWGI2R"; /* 특정 글꼴 설정 */
+  font-size: 40px; /* 텍스트 크기 설정 */
+  font-weight: 400; /* 텍스트 두께 설정 */
+  margin-top: 60px;
+}
+
+.banner-text2 {
+  color: #fff;
+  opacity: 90%;
+  font-family: "KoreanSWGI1R";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 10px 0px;
+}
+
+.animals-category {
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  float: left;
+  margin: 40px 28px 0px 0px;
+}
+
+#animals-categories-wrapper a:hover {
+  background-image: url("");
 }
