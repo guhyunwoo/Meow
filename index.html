@@ -65,64 +65,17 @@
             </div>
           </a>
         </div>
-        <!-- 배너 끝 -->
+      </div>
+      <!-- 배너 끝 -->
+      <div adopt-posts>
+        <div></div>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EasePack.min.js"></script>
     <script>
       const banner = document.querySelector("#banner");
-      const dog = document.querySelector("#dog");
-      const cat = document.querySelector("#cat");
-      const other = document.querySelector("#other");
-      const lost = document.querySelector("#lost");
-
-      gsap.set(dog, { opacity: 0, y: -80 });
-      gsap.set(cat, { opacity: 0, x: 80 });
-      gsap.set(other, { opacity: 0, y: 80 });
-      gsap.set(lost, { opacity: 0, x: 300 });
-
       gsap.to(banner, { opacity: 1, y: 60 });
-      gsap.to(dog, {
-        duration: 2,
-        delay: 0.6,
-        y: 0,
-        ease: "elastic",
-      });
-      gsap.to(dog, {
-        delay: 0.6,
-        opacity: 1,
-      });
-      gsap.to(cat, {
-        delay: 0.7,
-        duration: 2,
-        ease: "elastic",
-        x: 0,
-      });
-      gsap.to(cat, {
-        delay: 0.7,
-        opacity: 1,
-      });
-      gsap.to(other, {
-        delay: 0.8,
-        opacity: 1,
-      });
-      gsap.to(other, {
-        delay: 0.8,
-        duration: 2,
-        ease: "elastic",
-        y: 0,
-      });
-      gsap.to(lost, {
-        delay: 0.9,
-        opacity: 1,
-      });
-      gsap.to(lost, {
-        delay: 0.9,
-        duration: 2,
-        ease: "elastic",
-        x: 0,
-      });
     </script>
   </body>
 </html>
