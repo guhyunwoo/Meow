@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- 네비게이션 바 시작 -->
+      <nav id="header">
+        <div id="contents-wrapper">
+          <a href="./index.html" id="logo">
+            <img src="../images/logo.svg" alt="Logo" />
+          </a>
+          <div id="content-wrapper">
+            <div id="content">
+              <a href="">입양하기</a>
+              <a href="">콘텐츠</a>
+              <a href="">쇼핑</a>
+              <a href="">커뮤니티</a>
+            </div>
+            <a href="./login.html" id="login">
+              <img src="../images/LOG IN button.svg" />
+            </a>
+          </div>
+        </div>
+      </nav>
+      <!-- 네비게이션 바 끝 -->
+      <!-- 배너 시작 -->
+      <div id="banner" style="position: relative; top: 0">
+        <div class="banner-wrapper">
+          <h1 class="banner-text1">당신의 인생의 동반자를 찾아보세요</h1>
+          <p class="banner-text2">
+            보호소와 구조 시설 또는 사람들이 분양하는 동물들을 찾아보세요
+          </p>
+          <div class="search-bar">
+            <a href="">
+              <img src="../images/search.svg" />
+            </a>
+            <input type="search" placeholder="검색" class="search" />
+          </div>
+        </div>
+        <!--동물 종류별 모음-->
+        <div class="animals-categories-wrapper">
+          <a href="">
+            <div class="animals-category" id="dog">
+              <img src="../images/dog.svg" />
+            </div>
+          </a>
+          <a href="">
+            <div class="animals-category" id="cat">
+              <img src="../images/cat.svg" />
+            </div>
+          </a>
+          <a href="">
+            <div class="animals-category" id="other">
+              <img src="../images/other.svg" />
+            </div>
+          </a>
+          <a href="">
+            <div class="animals-category" id="lost">
+              <img src="../images/lost.svg" />
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-- 배너 끝 -->
+      <div id="adopt-wrapper">
+        <div class="adopt-a-wrapper">
+          <a href="./adopt.html" id="d">
+            <img src="../images/adopt-link.svg" alt="주인을 찾는중인 동물들" />
+          </a>
+        </div>
+        <div class="adopt-posts">
+          <!-- js에서 for문으로 post들 생성-->
+        </div>
+      </div>
+      <div id="user-posts">
+        <div class="user-a-wrapper">
+          <a href="./user-posts.html">
+            <img src="../images/Group 9.svg">
+          </a>
+      </div>
+      <div class="user-posts-wrapper">
+      <a href="./user-post.html">
+        <img src="../images/Frame 30.svg">
+      </a>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EasePack.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
