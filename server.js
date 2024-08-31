@@ -1,8 +1,11 @@
 const express = require("express");
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("여기는 루트입니다.");
+app.engine("html", require("ejs").renderFile);
+app.set("view engine", "html");
+app.set("views", __dirname + "/public");
+app.get("*", (req, res) => {
+  res.render("index", { title: "Express" });
 });
 
 app.get("/login", (req, res) => {
@@ -10,4 +13,8 @@ app.get("/login", (req, res) => {
 });
 app.listen(3000, () => {
   console.log("서버 작동");
+});
+
+app.get("/", (req, res) => {
+  res.render("index", { title: "Express" });
 });
