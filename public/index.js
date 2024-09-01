@@ -5,56 +5,56 @@ const posts = [
   {
     id: 1,
     title: "시루",
-    imgSrc: "../images/시루.png",
+    imgSrc: "/images/시루.png", // 수정된 경로
     description: "#시바견",
     place: "경남 양산시 물금읍",
   },
   {
     id: 2,
     title: "키루",
-    imgSrc: "../images/키루.png",
+    imgSrc: "/images/키루.png", // 수정된 경로
     description: "#샴",
     place: "부산광역시 화명동",
   },
   {
     id: 3,
     title: "짠이",
-    imgSrc: "../images/짠이.png",
+    imgSrc: "/images/짠이.png", // 수정된 경로
     description: "#랙돌",
     place: "부산광역시 가락동",
   },
   {
     id: 4,
     title: "코코",
-    imgSrc: "../images/코코.png",
+    imgSrc: "/images/코코.png", // 수정된 경로
     description: "#스코티쉬 폴드",
     place: "서울특별시 강남",
   },
   {
     id: 5,
     title: "시루",
-    imgSrc: "../images/시루.png",
+    imgSrc: "/images/시루.png", // 수정된 경로
     description: "#시바견",
     place: "경남 양산시 물금읍",
   },
   {
     id: 6,
     title: "키루",
-    imgSrc: "../images/키루.png",
+    imgSrc: "/images/키루.png", // 수정된 경로
     description: "#샴",
     place: "부산광역시 화명동",
   },
   {
     id: 7,
     title: "짠이",
-    imgSrc: "../images/짠이.png",
+    imgSrc: "/images/짠이.png", // 수정된 경로
     description: "#랙돌",
     place: "부산광역시 가락동",
   },
   {
     id: 8,
     title: "코코",
-    imgSrc: "../images/코코.png",
+    imgSrc: "/images/코코.png", // 수정된 경로
     description: "#스코티쉬 폴드",
     place: "서울특별시 강남",
   },
@@ -63,7 +63,6 @@ const posts = [
 // adopt-posts 요소 가져오기
 const adoptPostsContainer = document.querySelector(".adopt-posts");
 
-// 게시글 요소 생성 함수
 // 게시글 요소 생성 함수
 const createPostElement = (post) => {
   const postDiv = document.createElement("div");
