@@ -3,6 +3,9 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
+const path = require("path");
+const imagesPath = path.join(__dirname, "./src/public/js/home/images");
+const homePath = path.join(__dirname, "./src/public/js/home");
 
 // 라우팅
 const home = require("./src/routes/home");
@@ -16,5 +19,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/", home); // 미들웨어 등록
+app.use("/images", express.static(imagesPath));
+// public/js/home 루트의 home
+app.use("/home", express.static(homePath));
 
 module.exports = app;
